@@ -13,14 +13,13 @@
 #endif
 
 
-	DDRA = 0x00; PORTA = 0xFF; // Configure port A's 8 pins as inputs
-	DDRC = 0xFF; PORTC = 0x00; // Configure port B's 8 pins as outputs, initialize
+int main(void) {
+    /* Insert DDR and PORT initializations */
+DDRA = 0x00; PORTA = 0xFF; // Configure port A's 8 pins as inputs
+        DDRC = 0xFF; PORTC = 0x00; // Configure port B's 8 pins as outputs, initialize
         unsigned char count = 0x00; // Temporary variable to hold the value of A
         unsigned char tmpA = 0x00;
 
-int main(void) {
-    /* Insert DDR and PORT initializations */
-	
     while (1) {
 	count = 0x00;
         tmpA = PINA;
